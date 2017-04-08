@@ -5,6 +5,10 @@ import javax.swing.JPanel;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JRadioButton;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
 import javax.swing.Box;
 import javax.swing.JTextField;
 
@@ -16,47 +20,53 @@ public abstract class APanel extends JApplet{
 	public final double TARIF_ELECTRYCITY = 2.74;
 	public final double TARIF_GAS_HOUS = 4994.02;
 	
-	double hot_water = 0;
-	double cold_water = 0;
-	double heating = 0;
-	double gas_flat = 0;
-	double electrycity = 0;
-	double gas_hous= 0;
+	public double hot_water = 0;
+	public double cold_water = 0;
+	public double gas = 0;
+	public double electrycity = 0;
 	
-	int area = 0;
-	double totals = 0;
+	public int area = 0;
+	public double totals = 0;
 	
-	public JPanel panel;
-	private JTextField Textfield_Area;
-	private JTextField textField_HotWater;
-	private JTextField textField_ColdWater;
-	private JTextField textField_Electricity;
-	private JTextField textField_Gas;
-	private JTextField textField_Total;
+	private JPanel panel;
+	public JTextField textField_Area;
+	public JTextField textField_HotWater;
+	public JTextField textField_ColdWater;
+	public JTextField textField_Electricity;
+	public JTextField textField_Gas;
+	public JTextField textField_Total;
+	public JRadioButton ApartmentRadioButton;
+	public JRadioButton HouseRadioButton;
+	public JButton ExitButton;
+	public JButton CalculateButton;
 	
 	public APanel() {
 		panel = new JPanel();
 		panel.setLayout(null);
 		getContentPane().add(panel);
 		
-		JButton ExitButton = new JButton("Exit");
+		ExitButton = new JButton("Exit");
 		ExitButton.setBounds(10, 195, 89, 23);
 		panel.add(ExitButton);
 		
-		JButton CalculateButton = new JButton("Calculate");
+		CalculateButton = new JButton("Calculate");
 		CalculateButton.setBounds(10, 173, 89, 23);
 		panel.add(CalculateButton);
 		
 		JLabel lblType = new JLabel("Type of accommodation:");
-		lblType.setBounds(10, 11, 118, 14);
+		lblType.setBounds(10, 11, 129, 14);
 		panel.add(lblType);
 		
-		JRadioButton ApartmentRadioButton = new JRadioButton("Apartment");
+		JLabel lblTotal = new JLabel("Total:");
+		lblTotal.setBounds(146, 177, 42, 14);
+		panel.add(lblTotal);
+		
+		ApartmentRadioButton = new JRadioButton("Apartment\r\n");
 		ApartmentRadioButton.setSelected(true);
 		ApartmentRadioButton.setBounds(6, 25, 109, 23);
 		panel.add(ApartmentRadioButton);
 		
-		JRadioButton HouseRadioButton = new JRadioButton("House");
+		HouseRadioButton = new JRadioButton("House");
 		HouseRadioButton.setBounds(6, 43, 109, 23);
 		panel.add(HouseRadioButton);
 		
@@ -64,26 +74,26 @@ public abstract class APanel extends JApplet{
 		lblArea.setBounds(149, 11, 39, 14);
 		panel.add(lblArea);
 		
-		Textfield_Area = new JTextField();
-		Textfield_Area.setBounds(185, 8, 86, 20);
-		panel.add(Textfield_Area);
-		Textfield_Area.setColumns(10);
-		
 		JLabel lblHotWater = new JLabel("Hot water (Cub.m)");
-		lblHotWater.setBounds(10, 73, 98, 14);
+		lblHotWater.setBounds(10, 73, 105, 14);
 		panel.add(lblHotWater);
 		
 		JLabel lblColdWater = new JLabel("Cold water (Cub.m)");
-		lblColdWater.setBounds(10, 98, 98, 14);
+		lblColdWater.setBounds(10, 98, 105, 14);
 		panel.add(lblColdWater);
 		
 		JLabel lblElectricity = new JLabel("Electricity (Cub.m)");
-		lblElectricity.setBounds(10, 123, 98, 14);
+		lblElectricity.setBounds(10, 123, 105, 14);
 		panel.add(lblElectricity);
 		
 		JLabel lblGas = new JLabel("Gas (Cub.m)");
-		lblGas.setBounds(10, 148, 98, 14);
+		lblGas.setBounds(10, 148, 105, 14);
 		panel.add(lblGas);
+		
+		textField_Area = new JTextField();
+		textField_Area.setBounds(185, 8, 86, 20);
+		panel.add(textField_Area);
+		textField_Area.setColumns(10);
 		
 		textField_HotWater = new JTextField();
 		textField_HotWater.setBounds(118, 67, 86, 20);
@@ -105,15 +115,11 @@ public abstract class APanel extends JApplet{
 		textField_Gas.setBounds(118, 142, 86, 20);
 		panel.add(textField_Gas);
 		
-		JLabel lblTotal = new JLabel("Total:");
-		lblTotal.setBounds(146, 177, 30, 14);
-		panel.add(lblTotal);
-		
 		textField_Total = new JTextField();
 		textField_Total.setColumns(10);
 		textField_Total.setBounds(119, 196, 86, 20);
 		panel.add(textField_Total);
 	}	
 
-	abstract void Calc();
+	abstract public void Calc();
 }
