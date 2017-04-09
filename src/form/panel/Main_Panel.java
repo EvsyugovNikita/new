@@ -8,6 +8,8 @@ import javax.swing.JRadioButton;
 
 import java.awt.CardLayout;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
@@ -81,11 +83,24 @@ public abstract class Main_Panel extends JApplet{
 		getContentPane().setLayout(new CardLayout());
 		panel = new JPanel();
 		panel.setLayout(null);
-
 		
 		buttons_add(buttons_name, buttons_text, buttons_size, panel);
 		labels_add(labels_number, labels_text, labels_size, panel);
 		radiobuttons_add(radiobuttons_name, radiobuttons_text, radiobuttons_size, panel);
+		radiobuttons[0].addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e) {
+				if (radiobuttons[0].isSelected()) {
+					radiobuttons[1].setSelected(false);
+				}
+			}
+		});
+		radiobuttons[1].addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e) {
+				if (radiobuttons[1].isSelected()) {
+					radiobuttons[0].setSelected(false);
+				}
+			}
+		});
 	}
 	public void radiobuttons_add (String radiobuttons_name[],String radiobuttons_text[], int radiobuttons_size[],JPanel panel){
 		for (int i=0; i<radiobuttons_number; i++){
