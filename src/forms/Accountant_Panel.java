@@ -1,5 +1,6 @@
 package forms;
 
+import java.awt.CardLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -25,6 +26,15 @@ public Accountant_Panel(){
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			Calc();
+		}
+	});
+	buttons[0].addActionListener(new ActionListener() {
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			CardLayout cl = (CardLayout) getContentPane().getLayout();
+			Authorization_Panel af = new Authorization_Panel();
+			getContentPane().add(af, "Auth");
+			cl.show(getContentPane(), "Auth");
 		}
 	});
 }

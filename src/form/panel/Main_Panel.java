@@ -17,6 +17,8 @@ import javax.swing.Box;
 import javax.swing.JTextField;
 
 public abstract class Main_Panel extends JApplet{
+	
+	
 	public final double TARIF_HOT_WATER = 141.44;
 	public final double TARIF_COLD_WATER = 22.21;
 	public final double TARIF_HEATING = 37.47;
