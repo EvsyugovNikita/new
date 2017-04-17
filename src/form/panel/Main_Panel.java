@@ -43,20 +43,20 @@ public abstract class Main_Panel extends JApplet{
 	public int buttons_number = 2;
 	public JButton[] buttons = new JButton[buttons_number];
 	public String buttons_name[] = {"ExitButton", "CalculateButton"};
-	public String buttons_text[] = {"Exit","Calculate"};
-	public int buttons_size[]={10, 195, 89, 23,10, 173, 89, 23};
+	public String buttons_text[] = {"Выход","Рассчет"};
+	public int buttons_size[]={10, 195, 89, 23,  10, 173, 89, 23};
 	
 	public int radiobuttons_number = 2;
 	public JRadioButton[] radiobuttons = new JRadioButton[radiobuttons_number];
 	public String radiobuttons_name[]={"ApartmentRadioButton","HouseRadioButton"};
-	public String radiobuttons_text[]={"Flat", "House"};
-	public int radiobuttons_size[]={6, 25, 60, 23,  6, 43, 60, 23};
+	public String radiobuttons_text[]={"Квартира", "Частный дом"};
+	public int radiobuttons_size[]={6, 25, 80, 23,  6, 43, 150, 23};
 	
 	public int user_textfields_number=6;
 	public JTextField[] user_textfields = new JTextField[user_textfields_number];
 	public String user_textfields_name[]={"textField_Area","textField_HotWater","textField_ColdWater","textField_Electricity",
 			"textField_Gas","textField_Total"};
-	public int user_textfields_size[]={155, 25, 86, 20,  168, 67, 86, 20,  168, 92, 86, 20,  168, 117, 86, 20,  
+	public int user_textfields_size[]={220, 25, 86, 20,  168, 67, 86, 20,  168, 92, 86, 20,  168, 117, 86, 20,  
 			168, 142, 86, 20,  119, 196, 86, 20};	
 	
 	public int accountant_textfields_number = 10;
@@ -64,22 +64,22 @@ public abstract class Main_Panel extends JApplet{
 	public String accountant_textfields_name[]={"textField_Area","textField_HotWater","textField_ColdWater","textField_Electricity",
 			"textField_Gas","textField_Total","Textfield_Cleaning","Textfield_lightning","Textfield_street_cleaning",
 			"Textfield_repairing"};
-	public int accountant_textfields_size[]={155, 25, 86, 20,  168, 67, 86, 20,  168, 92, 86, 20,  168, 117, 86, 20,  
+	public int accountant_textfields_size[]={220, 25, 86, 20,  168, 67, 86, 20,  168, 92, 86, 20,  168, 117, 86, 20,  
 			168, 142, 86, 20,  119, 196, 86, 20,
 			400, 67, 86, 20, 400, 92, 86, 20,  400, 117, 86, 20,  400, 142, 86, 20};
 	
 	public int labels_number=7;
 	public JLabel[] labels = new JLabel[labels_number];
-	public String labels_text[]={"Type of accommodation:",  "Total:", "Flat area=","Hot water (Cub.m)", "Cold water (Cub.m)",
-			"Electricity (Kw-hr)", "Gas (Cub.m/1000 Cub.m.)"};
-	public int labels_size[]={10, 11, 150, 14,  146, 177, 50, 14,  95, 25, 109, 23,  10, 73, 105, 14,  10, 98, 105, 14,
-			10, 123, 105, 14,  10, 148, 150, 14};
+	public String labels_text[]={"Тип жилья:",  "Итог:", "Площадь квартиры =","Горячая вода (куб.м.)", "Холодная вода (куб.м.)",
+			"Электричество (квт/ч)", "Газ (куб.м./1000 куб.м.)"};
+	public int labels_size[]={10, 11, 150, 14,  146, 177, 50, 14,  95, 25, 160, 23,  10, 73, 150, 14,  10, 98, 150, 14,
+			10, 123, 150, 14,  10, 148, 160, 14};
 	
 	public int accountant_labels_number = 4;
 	public JLabel[] accountant_labels = new JLabel[accountant_labels_number];
-	public String accountant_labels_text[]={"House cleaning","House lightning","Street cleaning",
-			"House repairing"};
-	public int accountant_labels_size[]={300, 67, 100, 20,  300, 92, 100, 20,  300, 117, 100, 20,  300, 142, 100, 20};
+	public String accountant_labels_text[]={"Уборка в подъезде","Освещение в доме","Уборка улицы",
+			"Капитальный ремонт"};
+	public int accountant_labels_size[]={270, 67, 130, 20,  270, 92, 130, 20,  270, 117, 130, 20,  270, 142, 130, 20};
 	
 	public Main_Panel() {
 		getContentPane().setLayout(new CardLayout());

@@ -24,7 +24,7 @@ public class Authorization_Panel extends JApplet{
 	
 	public int auth_labels_number = 4;
 	public JLabel[] auth_labels = new JLabel[auth_labels_number];
-	public String auth_labels_text[]={"Authorization","Login","Password",""};
+	public String auth_labels_text[]={"Авторизация","Логин","Пароль",""};
 	public int auth_labels_size[]={170, 39, 230, 42,  111, 113, 55, 24,  111, 151, 55, 24, 111, 240, 223, 24};	
 	
 	public Authorization_Panel(){
@@ -44,7 +44,7 @@ public class Authorization_Panel extends JApplet{
 		pass.setBounds(180, 151, 94, 20);
 		panel.add(pass);
 
-		JButton JButton_Enter = new JButton("Enter");
+		JButton JButton_Enter = new JButton("Вход");
 		JButton_Enter.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				CardLayout cl = (CardLayout) getContentPane().getLayout();

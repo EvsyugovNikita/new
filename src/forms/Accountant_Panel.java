@@ -12,11 +12,6 @@ import form.panel.Main_Panel;
 
 public class Accountant_Panel extends Main_Panel{
 	
-	public int accountant_labels_number = 4;
-	public JLabel[] accountant_labels = new JLabel[accountant_labels_number];
-	public String accountant_labels_text[]={"House cleaning","House lightning","Street cleaning",
-			"House repairing"};
-	public int accountant_labels_size[]={300, 67, 100, 20,  300, 92, 100, 20,  300, 117, 100, 20,  300, 142, 100, 20};	
 	
 public Accountant_Panel(){
 	getContentPane().add(panel, "Accountant");
