@@ -57,7 +57,7 @@ public class Authorization_Panel extends JApplet{
 					getContentPane().add(af, "Accountant");
 					cl.show(getContentPane(), "Accountant");
 				}else if(auth(JTextField_Login.getText(), pass.getText()) == 0){
-					auth_labels[3].setText("Wrong login or password!");
+					auth_labels[3].setText("Неверный логин или пароль!");
 				}
 			}
 		});

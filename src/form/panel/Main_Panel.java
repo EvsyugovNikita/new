@@ -43,7 +43,7 @@ public abstract class Main_Panel extends JApplet{
 	public int buttons_number = 2;
 	public JButton[] buttons = new JButton[buttons_number];
 	public String buttons_name[] = {"ExitButton", "CalculateButton"};
-	public String buttons_text[] = {"Выход","Рассчет"};
+	public String buttons_text[] = {"Выход","Расчет"};
 	public int buttons_size[]={10, 195, 89, 23,  10, 173, 89, 23};
 	
 	public int radiobuttons_number = 2;
